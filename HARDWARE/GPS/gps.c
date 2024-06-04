@@ -2,38 +2,37 @@
 #include "gps.h"
 #include "delay.h"
 #include <string.h>
-#include <stdio.h>  // ??stdio.h??????sprintf
+#include <stdio.h> 
 
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_usart.h"
 
-//ÉÏ´«´úÂëÓÃÏÂÔØ¿Ú£¬ÔÆ¶ËÓÃUART¿Ú£¬´®¿Ú¼àÊÓÆ÷ÓÃ°å×ÓÒı½ÅÉÏµÄ5V£¬GND£¬U2_RXD£¬U2_TXD£¨Èı¸öÖ»ÄÜ·Ö¿ªÓÃ£©
-//NB-IoTÉÏµÄËùÓĞRX½ÓÔÚPA2ÉÏ£¬ËùÓĞTX½ÓPA3ÉÏ
+//ä¸Šä¼ ä»£ç ç”¨ä¸‹è½½å£ï¼Œäº‘ç«¯ç”¨UARTå£ï¼Œä¸²å£ç›‘è§†å™¨ç”¨æ¿å­å¼•è„šä¸Šçš„5Vï¼ŒGNDï¼ŒU2_RXDï¼ŒU2_TXDï¼ˆä¸‰ä¸ªåªèƒ½åˆ†å¼€ç”¨ï¼‰
+//NB-IoTä¸Šçš„æ‰€æœ‰RXæ¥åœ¨PA2ä¸Šï¼Œæ‰€æœ‰TXæ¥PA3ä¸Š
 
 void GPS_Init(void)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
     USART_InitTypeDef USART_InitStructure;
 
-    /* ?? GPIOA ? USART2 ?? */
+   
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
 
-    /* GPIOA2 ? GPIOA3 ??? */
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2 | GPIO_Pin_3;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;  // ????
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;  // ?? 50MHz
-    GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;  // ??????
-    GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;  // ??
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;  
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;  
+    GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;  
+    GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;  
 
-    GPIO_Init(GPIOA, &GPIO_InitStructure);  // ??? PA2,PA3
+    GPIO_Init(GPIOA, &GPIO_InitStructure);  
 
-    /* ?????? */
-    GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2);  // PA2???USART2_TX
-    GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2);  // PA3???USART2_RX
+    
+    GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2);  
+    GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2);  
 
-    /* USART2 ?? */
+   
     USART_InitStructure.USART_BaudRate = 9600;
     USART_InitStructure.USART_WordLength = USART_WordLength_8b;
     USART_InitStructure.USART_StopBits = USART_StopBits_1;
@@ -116,7 +115,7 @@ void NB_IoT_Init(void) {
     delay_ms(2000);
 
     // Set the APN
-    NB_IoT_SendData("AT+CGDCONT=1,\"IP\",\"CMIOT\"\r\n");  //ÖĞÒÆµÄAPNÅäÖÃ
+    NB_IoT_SendData("AT+CGDCONT=1,\"IP\",\"CMIOT\"\r\n");  //ä¸­ç§»çš„APNé…ç½®
     delay_ms(1000);
 
     // Open a connection to the cloud platform
@@ -125,17 +124,17 @@ void NB_IoT_Init(void) {
 }
 
 void NB_IoT_SendGPSData(char* latitude, char* longitude) {
-    // ??????
+    
     char data[100];
     char command[150];
 
-    // ???????
+    
     sprintf(data, "Latitude: %s, Longitude: %s", latitude, longitude);
 
-    // ?????IP?192.168.1.100,???12345
-    sprintf(command, "AT+NSOST=0,\"183.230.40.96\",1883,%d,\"%s\"\r\n", strlen(data), data);  //ONENETÆ½Ì¨ÉÏµÄMOTTĞ­ÒéIPµØÖ·ºÍ¶Ë¿ÚºÅÅäÖÃ
+   
+    sprintf(command, "AT+NSOST=0,\"183.230.40.96\",1883,%d,\"%s\"\r\n", strlen(data), data);  //ONENETå¹³å°ä¸Šçš„MOTTåè®®IPåœ°å€å’Œç«¯å£å·é…ç½®
     
     NB_IoT_SendData(command);
-    delay_ms(1000);  // ????????
+    delay_ms(1000);  
 }
 
