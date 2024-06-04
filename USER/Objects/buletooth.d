@@ -1,0 +1,12 @@
+.\objects\buletooth.o: ..\HARDWARE\BuleTooth\BuleTooth.c
+.\objects\buletooth.o: ..\SYSTEM\sys\stm32f4xx.h
+.\objects\buletooth.o: ..\SYSTEM\sys\core_cm4.h
+.\objects\buletooth.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\buletooth.o: ..\SYSTEM\sys\core_cmInstr.h
+.\objects\buletooth.o: ..\SYSTEM\sys\core_cmFunc.h
+.\objects\buletooth.o: ..\SYSTEM\sys\core_cm4_simd.h
+.\objects\buletooth.o: ..\SYSTEM\sys\system_stm32f4xx.h
+.\objects\buletooth.o: ..\SYSTEM\usart\usart.h
+.\objects\buletooth.o: ..\SYSTEM\sys\sys.h
+.\objects\buletooth.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\buletooth.o: ..\HARDWARE\BuleTooth\BuleTooth.h

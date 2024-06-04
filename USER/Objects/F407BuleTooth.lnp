@@ -1,0 +1,10 @@
+--cpu=Cortex-M4.fp
+".\objects\startup_stm32f40_41xxx.o"
+".\objects\test.o"
+".\objects\delay.o"
+".\objects\sys.o"
+".\objects\usart.o"
+".\objects\buletooth.o"
+--ro-base 0x08000000 --entry 0x08000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\F407BuleTooth.map" -o .\Objects\F407BuleTooth.axf

@@ -1,0 +1,57 @@
+Dependencies for Project 'F407BuleTooth', Target 'Target 1': (DO NOT MODIFY !)
+F (.\startup_stm32f40_41xxx.s)(0x5821A368)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 524" --pd "STM32F407xx SETA 1"--list .\listings\startup_stm32f40_41xxx.lst --xref -o .\objects\startup_stm32f40_41xxx.o --depend .\objects\startup_stm32f40_41xxx.d)
+F (.\test.c)(0x6655A0BD)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\BuleTooth-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F407xx -DSTM32F40_41xxx-o .\objects\test.o --omf_browse .\objects\test.crf --depend .\objects\test.d)
+I (..\HARDWARE\BuleTooth\BuleTooth.h)(0x6655A072)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\SYSTEM\sys\stm32f4xx.h)(0x6655916A)
+I (..\SYSTEM\sys\core_cm4.h)(0x5821A368)
+I (..\SYSTEM\sys\core_cmInstr.h)(0x5821A368)
+I (..\SYSTEM\sys\core_cmFunc.h)(0x5821A368)
+I (..\SYSTEM\sys\core_cm4_simd.h)(0x5821A368)
+I (..\SYSTEM\sys\system_stm32f4xx.h)(0x5821A368)
+I (..\SYSTEM\sys\sys.h)(0x5821A368)
+I (..\SYSTEM\delay\delay.h)(0x5821A368)
+I (..\SYSTEM\usart\usart.h)(0x5821A368)
+I (D:\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
+F (..\SYSTEM\delay\delay.c)(0x5821A368)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\BuleTooth-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F407xx -DSTM32F40_41xxx-o .\objects\delay.o --omf_browse .\objects\delay.crf --depend .\objects\delay.d)
+I (..\SYSTEM\delay\delay.h)(0x5821A368)
+I (..\SYSTEM\sys\sys.h)(0x5821A368)
+I (..\SYSTEM\sys\stm32f4xx.h)(0x6655916A)
+I (..\SYSTEM\sys\core_cm4.h)(0x5821A368)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\SYSTEM\sys\core_cmInstr.h)(0x5821A368)
+I (..\SYSTEM\sys\core_cmFunc.h)(0x5821A368)
+I (..\SYSTEM\sys\core_cm4_simd.h)(0x5821A368)
+I (..\SYSTEM\sys\system_stm32f4xx.h)(0x5821A368)
+F (..\SYSTEM\sys\sys.c)(0x66559622)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\BuleTooth-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F407xx -DSTM32F40_41xxx-o .\objects\sys.o --omf_browse .\objects\sys.crf --depend .\objects\sys.d)
+I (..\SYSTEM\sys\sys.h)(0x5821A368)
+I (..\SYSTEM\sys\stm32f4xx.h)(0x6655916A)
+I (..\SYSTEM\sys\core_cm4.h)(0x5821A368)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\SYSTEM\sys\core_cmInstr.h)(0x5821A368)
+I (..\SYSTEM\sys\core_cmFunc.h)(0x5821A368)
+I (..\SYSTEM\sys\core_cm4_simd.h)(0x5821A368)
+I (..\SYSTEM\sys\system_stm32f4xx.h)(0x5821A368)
+F (..\SYSTEM\usart\usart.c)(0x66559664)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\BuleTooth-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F407xx -DSTM32F40_41xxx-o .\objects\usart.o --omf_browse .\objects\usart.crf --depend .\objects\usart.d)
+I (..\SYSTEM\sys\sys.h)(0x5821A368)
+I (..\SYSTEM\sys\stm32f4xx.h)(0x6655916A)
+I (..\SYSTEM\sys\core_cm4.h)(0x5821A368)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\SYSTEM\sys\core_cmInstr.h)(0x5821A368)
+I (..\SYSTEM\sys\core_cmFunc.h)(0x5821A368)
+I (..\SYSTEM\sys\core_cm4_simd.h)(0x5821A368)
+I (..\SYSTEM\sys\system_stm32f4xx.h)(0x5821A368)
+I (..\SYSTEM\usart\usart.h)(0x5821A368)
+I (D:\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
+F (..\HARDWARE\BuleTooth\BuleTooth.c)(0x6655A072)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\BuleTooth-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F407xx -DSTM32F40_41xxx-o .\objects\buletooth.o --omf_browse .\objects\buletooth.crf --depend .\objects\buletooth.d)
+I (..\SYSTEM\sys\stm32f4xx.h)(0x6655916A)
+I (..\SYSTEM\sys\core_cm4.h)(0x5821A368)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\SYSTEM\sys\core_cmInstr.h)(0x5821A368)
+I (..\SYSTEM\sys\core_cmFunc.h)(0x5821A368)
+I (..\SYSTEM\sys\core_cm4_simd.h)(0x5821A368)
+I (..\SYSTEM\sys\system_stm32f4xx.h)(0x5821A368)
+I (..\SYSTEM\usart\usart.h)(0x5821A368)
+I (..\SYSTEM\sys\sys.h)(0x5821A368)
+I (D:\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (..\HARDWARE\BuleTooth\BuleTooth.h)(0x6655A072)
