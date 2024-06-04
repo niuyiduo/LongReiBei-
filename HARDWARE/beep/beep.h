@@ -8,6 +8,5 @@
 void BEEP_Init(void);
 void BEEP_On(void);
 void BEEP_Off(void);
-void CheckTemperatureAndControlBuzzer(void);
 
 #endif // __BEEP_H
